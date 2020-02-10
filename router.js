@@ -7,7 +7,7 @@ router.get(
   (request, response, next) =>
     Image.findAll().then(images => {
       response.json(images);
-      console.log("Message from findaAll at 4000/image");
+      console.log("Message from findAll at 4000/image");
     })
   // // this doesnt work: why?
   // .then(
@@ -16,5 +16,23 @@ router.get(
   //   })
   // )
 );
+
+// router.post("/image", (request, response, next) => {
+//   Image.create(request.body).then(image => {
+//     response.json(image);
+//     console.log("Message from POST at 4000/image");
+//   });
+// });
+
+router.post("/image", async function(request, response, next) {
+  try {
+    const image = await Image.create(request.body);
+    image
+      ? response.send(image)
+      : response.status(404).send("Error: page not found");
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;
