@@ -9,12 +9,14 @@ const cors = require("cors");
 
 const corsMiddleware = cors();
 app.use(corsMiddleware);
-
 const parserMiddleware = bodyParser.json();
 app.use(parserMiddleware);
 
 const authRouter = require("./auth/router");
 app.use(authRouter);
+
+const userRouter = require("./user/router");
+app.use(userRouter);
 
 app.use(imageRouter);
 

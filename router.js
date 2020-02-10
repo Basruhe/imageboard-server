@@ -1,3 +1,4 @@
+// note: This routerfile should be in the image folder?!
 const { Router } = require("express");
 const Image = require("../server/image/model");
 const router = new Router();
