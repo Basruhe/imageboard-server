@@ -13,6 +13,9 @@ app.use(corsMiddleware);
 const parserMiddleware = bodyParser.json();
 app.use(parserMiddleware);
 
+const authRouter = require("./auth/router");
+app.use(authRouter);
+
 app.use(imageRouter);
 
 app.listen(port, () => {
