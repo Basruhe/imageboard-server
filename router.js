@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const Image = require("../server/image/model");
 const router = new Router();
-const bodyParser = require("body-parser");
 
 router.get(
   "/image",
