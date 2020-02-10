@@ -2,6 +2,7 @@ const express = require("express");
 const port = process.env.PORT || 4000;
 const app = express();
 const db = require("./db");
+const Image = require("./image/model");
 
 app.listen(port, () => {
   // console.log(`Express server listening on ${port}`);
