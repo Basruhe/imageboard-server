@@ -27,3 +27,7 @@ app.listen(port, () => {
 // Postgres server port: 5432
 // Host port: 3000
 // Express server port: 4000
+
+// To start this project:
+// Start or create new docker container (3000/5432)
+// npm run start (or nodemon index.js)

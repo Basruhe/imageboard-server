@@ -1,4 +1,4 @@
-const { Router } = require("express");
+const { Router } = require("express"); // note: express has all sorts of things. You only import the router, hence { }. Same when exporting things!
 const { toJWT, toData } = require("./jwt");
 const router = new Router();
 
@@ -49,5 +49,6 @@ router.get("/secret-endpoint", (req, res) => {
 
 // If you would like to make a request to a secret route (:4000/secret-endpoint), you would use the JWT token like this:
 // http :4000/secret-endpoint Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTUzNTM2MjIzMCwiZXhwIjoxNTM1MzY5NDMwfQ.DxFRClbZLP0L-fczkSiNHEiLqYI4HGbC8Ezrh3JhlG8"
+// where the last part is the JWT you get after login
 
 module.exports = router;

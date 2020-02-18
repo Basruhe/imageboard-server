@@ -36,4 +36,6 @@ router.post("/image", async function(request, response, next) {
   }
 });
 
+// TODO: image delete
+
 module.exports = router;
