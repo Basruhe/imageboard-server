@@ -25,6 +25,7 @@ router.get(
 //   });
 // });
 
+// To test: http :3000/image title=x url=y
 router.post("/image", async function(request, response, next) {
   try {
     const image = await Image.create(request.body);
